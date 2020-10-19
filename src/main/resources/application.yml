@@ -1,0 +1,17 @@
+---
+spring:
+  jpa:
+    database: MYSQL
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+  datasource:
+    url: jdbc:mysql://${datasource.url.master:localhost}:3306/pnwc?useSSL=false
+    username: ${datasource.username:root}
+    password: ${datasource.password:password}
+    initialization-mode: always
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  flyway:
+    locations: classpath:/db/createTable,classpath:/db/insertMaster, classpath:/db/insertData
+    # 利用プロファイル情報
+    enabled: true
