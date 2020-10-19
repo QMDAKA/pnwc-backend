@@ -5,7 +5,8 @@ services:
     ports:
       - "3306:3306"
     volumes:
-      - "./db:/var/lib/mysql"
+      - "./mysql/db:/var/lib/mysql"
+      - "./mysql/config/my.cnf:/etc/mysql/my.cnf"
     environment:
       MYSQL_ROOT_PASSWORD: password
       MYSQL_DATABASE: pnwc

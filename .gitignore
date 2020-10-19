@@ -1,6 +1,5 @@
 .gradle
 .idea
-config/
-db
+mysql/db
 gradle
 build
